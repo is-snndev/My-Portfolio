@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PORTFOLIO</title>
+
+        <!--styles-->
+        <style>
+            body{
+                width: 100%;
+                height: auto;
+                background-color: black;
+                color: white;
+                margin: 0px;
+
+            }
+            nav{
+                position:fixed;
+                top: 0%;
+                left: 0%;
+                right: 0%;
+                width: 100%;
+                background-color: rgb(0, 0, 71);
+
+            }
+            nav ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 1%;
+                margin: 0%;
+
+            }
+            nav ul li {
+                list-style: none;    
+            }
+
+            nav ul li a {
+                text-decoration: none; 
+                color: azure; 
+                font-size: large; 
+            }
+
+            nav ul li a:hover {
+                color: rgb(57, 80, 255);  
+            }
+
+            .hero{
+                padding-top: 2%;
+                display: flex;
+                flex-direction: row;
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+
+            .hero .text{
+                width: 70%;
+                height: auto;
+                display: grid;
+                grid-column: auto;
+                padding-left: 4%;
+                align-content: center;
+                justify-content: start;
+                justify-items: start;
+            }
+
+            .hero .text h1{
+                font-size: xx-large;
+                color: rgb(101, 155, 255);
+                margin-bottom: 2%;
+                font-family: initial;
+                
+            }
+
+            .hero .text h2{
+                margin-top: 2%;
+                font-size: x-large;
+                color: rgb(164, 196, 255);
+            }
+
+            .hero .image{
+                width: 30%;
+                align-content: center;
+                padding: 4%;
+                
+            }
+
+            .hero .image img{
+                width: 60%;
+                height: auto;
+                border-radius: 20px;
+                border: 8px solid rgb(82, 94, 124);
+            }
+
+            section h2{
+                width: 100%;
+                display: flex;
+                background-color: rgb(31, 26, 71);
+                color: white;
+                font-size: x-large;
+                font-family: Arial, Helvetica, sans-serif;
+                align-content: center;
+                justify-content: center;
+
+            }
+
+            .pro{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                font-size: x-large;
+                height: auto;
+                padding: 8% 0;
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+
+            .pro .row{
+                display: grid;
+                justify-items: center;  
+            }
+
+            .pro .row button{
+                background-color: rgb(0, 11, 32);
+                color:rgb(255, 255, 255);
+                width: 20vw;
+                font-size: large;
+                height: 32px;
+                border-radius: 18px;
+                margin: 3%;
+            }
+            
+
+            .pro .row a{
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+
+             .pro .row a:hover{
+                color: rgb(81, 81, 108);
+            }
+
+            .pro .column{
+                display: grid;
+                justify-items: center;
+               
+            }
+
+            .pro .column button{
+                background-color: rgb(0, 11, 32);
+                color:rgb(255, 255, 255);
+                width: 20vw;
+                font-size: large;
+                height: 32px;
+                border-radius: 20px;
+                margin: 3%;
+            }
+
+            .pro .column a{
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+
+            .pro .column a:hover{
+                color: rgb(81, 81, 108);
+            }
+
+            .skills-grid{
+                height: auto;
+                padding-left: 1%;
+                padding-right: 1%;
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+
+            .skills-grid img{
+                width:30px;
+                height:30px;
+            }
+
+            .timeline{
+                display: flex;
+                flex-direction: row;
+                height: auto;
+                align-items: center;
+                justify-content: space-around;
+                font-size: x-large;
+                color: rgb(0, 0, 255);
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+
+            .timeline .t1, .timeline .t2, .timeline .t3{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .timeline .t1 button, .timeline .t2 button, .timeline .t3 button{
+                width: 20vw;
+                height: auto;
+                margin: 2%;
+            }
+
+            .contact-grid{
+                display: flex;
+                flex-direction: column;
+                padding-left: 4%;
+                padding-right: 4%;
+                height: auto;
+                justify-content: space-around;
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+
+            .contact-grid .buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-bottom: 5%;
+            }
+
+            .contact-grid .buttons button{
+                color: rgb(0, 0, 0);
+                background-color: rgb(143, 122, 2);
+                text-decoration: none; 
+                border-radius: 20px; 
+                font-size: large;
+                width: 15vw;
+                height: auto;
+                align-items: center;
+
+            }
+
+            .contact-grid .buttons button a{
+                text-decoration: none;  
+                color: rgb(255, 255, 255);
+               
+            }
+            
+            .contact-grid .buttons button a:hover{ 
+                color: rgb(255, 221, 0);
+               
+            }
+            
+            footer p{
+                font-size: x-large;
+                padding-left: 2%;
+            }
+
+
+        @media (max-width: 768px) {
+
+        section h2{
+            font-size: small;
+        }
+
+        nav ul li a{
+            font-size: small;
+        }
+        .hero .text h1 {
+            font-size: small;      
+        }
+        .hero .text h2 {
+            font-size: smaller;      
+        }
+
+        .pro .row button, .pro .column button {
+            width: 30vw;
+            margin: 4%;
+            height: 7.2vh;
+         }
+
+        .pro .row button a, .pro .column button a{
+         font-size: xx-small;}
+
+        .timeline .t1 button, .timeline .t2 button, .timeline .t3 button {
+            width:20vw;
+            height: 8vh;
+            font-size: xx-small;
+            margin: 1.5%;
+        }
+
+        .timeline .t1 button a, .timeline .t2 button a, .timeline .t3 button a {
+            font-size: xx-small;
+        } 
+
+        .contact-grid .buttons{
+            width: 15vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+
+        .contact-grid .buttons a{
+            font-size: xx-small;
+        }
+
+        footer p{
+            font-size: smaller;
+        }
+
+
+
+        }
+
+        </style>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+        <div class="text">
+            <h1>Hi! I'm Sneha</h1>
+            <h2>Creative Programmer and Designer</h2> 
+        </div>
+        <div class="image">
+            <img src="profileann.jpeg" alt="Profile">
+        </div>
+        </div>
+
+        <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="pro">
+            <div class="row">
+            <div class="p1"><button><a href="https://github.com/is-snndev/Snakeandladdergameinc.git">Snake & Ladder Game</a></button></div>
+            <div class="p2"><button><a href="https://github.com/is-snndev/Bankingsysteminc.git">Banking System</a></button></div>
+            <div class="p3"><button><a href="https://github.com/is-snndev/Tic-Tac-Toegameinc.git">Tic Toe Game</a></button></div>
+            </div>
+            <div class="column">
+            <div class="p4"><button><a href="https://github.com/is-snndev/Dynamiclinkedlistmanager.git">Dynamic List Link Manager</a></button></div>
+            <div class="p5"><button><a href="https://github.com/is-snndev/File-encryption-and-decryptioninc.git">File Encryption & Decryption</a></button></div>
+            </div>
+        </div>
+        </section>
+
+        <section id="skills">
+        <h2>SKILLS</h2>
+        <div class="skills-grid">
+            <div class="s1">
+                <img src="clogo.png" alt="C"></div>
+            <div class="s2">
+                <img src="csslogo.png" alt="css"></div>
+            <div class="s3">
+                <img src="htmllogo.png" alt="html"></div>
+            <div class="s4">
+                <img src="figmalogo.webp" alt="figma"></div>
+            <div class="s5">
+                <img src="pptlogo.webp" alt="ppt"></div>
+        </div> 
+     </section>    
+
+     <section id="education">
+        <h2>Education</h2>
+
+        <div class="timeline">
+            <div class="t1">
+                <!--<h3>____||________________________</h3>-->
+                <button><h3>2022-2023</h3></button>
+                <button><h3>Class 10</h3></button>
+                <button><h3>Sai Public School</h3></button>
+                
+            </div>
+            <div class="t2">
+                <!--<h3>____||________________________</h3>-->
+                <button><h3>2024-2025</h3></button>
+                <button><h3>Class 12</h3></button>
+                <button><h3>Sai Public School</h3></button>
+                
+            </div>
+            <div class="t3">
+                <!--<h3>____||________________________</h3>-->
+                <button><h3>2025-2029</h3></button>
+                <button><h3>BTech</h3></button>
+                <button><h3>Dehradun Institute Of Technology</h3></button>
+                
+            </div>
+        </div>
+     </section> 
+
+     <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+            <div class="buttons">
+            <button><a href="https://github.com/is-snndev">GITHUB</a></button>
+            <button><a href="https://www.linkedin.com/in/sneha-negi-b39098373">LINKEDIN</a></button>
+            <button><a href="https://leetcode.com/u/snn_dev">LEETCODE</a></button>
+            <button><a href="sn.snehanegi@gmail.com">Gmail</a></button>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+            </div>
+            <form 
+                action="https://docs.google.com/forms/d/e/1FAIpQLSfqOyHf7AZZz7_9vTFkXs82t_-B0NX9u0xBUu88tZMGBrGjsg/formResponse"  
+                method="post" 
+                target="hidden_iframe">
+            <input type="text" placeholder="Your Name" name="entry.441240955"><br><br>
+            <input type="email" placeholder="Your Email" name="entry.269942521"><br><br>
+            <textarea placeholder="Your Message" name="entry.1439835711"></textarea><br><br>
+            <button type="submit">Send</button><br>
+        </form>  
+       </div> 
+     </section>
+
+     <footer>
+        <p>© Sneha| Portfolio</p>
+     </footer>
+
+
+    </body>    
+
+</html>
